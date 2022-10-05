@@ -1,10 +1,10 @@
-# Docker PHP
+## Docker for PHP
 * nginx
 * php 8.0.24
 * mariadb 10.5.9
 * adminer
 
-# How to use
+## How to use with laravel 8
 1. Clone this repository
 2. Build images using this command
 > $ docker compose build
@@ -20,26 +20,22 @@
 select no
 7. Last, remove project folder using this command 
 > $ rm -rf project/
-8. exit the container, using this command
+8. Exit the container, using this command
 > $ exit
-9. shutdown all the container
+9. Shutdown all the container
 > $ docker compose down
-10. start up again the container
+10. Start up again the container
 > $ docker compose up -d
 
-# Additional step
 ## laravel breeze installation
-1. add this command container
-> composer require laravel/breeze --dev
-or
-> composer require laravel/breeze:* --dev
+1. Add this command inside our app container to install laravel breeze
 > composer require laravel/breeze:1.9.4
-2. install laravel breeze setup
+2. Install laravel breeze setup
 > php artisan breeze:install
-3. install tailwind dependencies
+3. Install tailwind dependencies
 > npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
-4. exit from container
-5. execute this command
+4. Exit from container
+5. Execute this command
 > npm install && npm run dev
-6. back to container shell, create this command.
+6. Back to container shell, execute this command.
 > php artisan migrate
