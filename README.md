@@ -17,7 +17,7 @@
 6. Next, move the content of the project folder, to our root directory using this command
 > $ mv ./project/* ./
 
-> $ mv ./project.* ./
+> $ mv ./project/.* ./
 
 there will a notification, just select no
 
